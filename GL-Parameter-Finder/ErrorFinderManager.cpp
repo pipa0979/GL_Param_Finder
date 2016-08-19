@@ -221,7 +221,7 @@ cerr << "Usage: " << argv << " -bmatch [BMATCH FILE]  -bsid [BSID FILE] -bmid [B
 <<" look at the description about how these works in wiki ]"
 <<" -log.file [log file name]"
 <<endl;
-
+}
 
 
 
