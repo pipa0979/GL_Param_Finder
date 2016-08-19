@@ -189,6 +189,7 @@ void ErrorFinderManager::performConsolidation(int argc,char *argv[])
 void ErrorFinderManager::displayError(std::string argv)
 {
 cerr<<"these parameters are not allowed "<<wrongParam<<endl;
+/*
 cerr << "Usage: " << argv << " -bmatch [BMATCH FILE]  -bsid [BSID FILE] -bmid [BMID FILE] -reduced [min_snp] [min_cm] "
 <<" -ped-file [ped file] -window [window width to calculate moving averages] "
 <<"-ma-err-threshold-start [start threshold] -gap [max gap to consolidate two matches]"
@@ -210,6 +211,20 @@ cerr << "Usage: " << argv << " -bmatch [BMATCH FILE]  -bsid [BSID FILE] -bmid [B
 << "-count.gap.errors [ TRUE or FALSE to include gap errors in errors count ]"
 << endl;
 }
+*/
+cerr << "Usage: " << argv << " -bmatch [BMATCH FILE]  -bsid [BSID FILE] -bmid [BMID FILE] -reduced [min_snp] [min_cm] "
+<<" -ped-file [ped file] -window [window width to calculate moving averages] "
+<<" -cut-value [value]"
+<<" -output.type [ must provide any of these. it can be "
+<<" MovingAverages  or Error1 or Error2 or Error3 or ErrorRandom1 " 
+<<" or ErrorRandom2 or Error3 or ErrorRandom3 or Full "
+<<" look at the description about how these works in wiki ]"
+<<" -log.file [log file name]"
+<<endl;
+
+
+
+
 void ErrorFinderManager::initiateErrorFinder()
 {
   eCalculator.readBmidFile(BMIDFILE);
