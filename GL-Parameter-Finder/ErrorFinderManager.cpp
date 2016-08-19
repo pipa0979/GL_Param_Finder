@@ -94,11 +94,11 @@ void ErrorFinderManager::performConsolidation(int argc,char *argv[])
         exit(1);
       }
     }
-    else  if(strcmp(argv[i],"-output.type")==0&&i<argc-1)
+    else  if(strcmp(argv[i],"-output-type")==0&&i<argc-1)
     {
       OPTION=string(argv[++i]);
     }
-    else  if(strcmp(argv[i],"-log.file")==0&&i<argc-1)
+    else  if(strcmp(argv[i],"-log-file")==0&&i<argc-1)
     {
       LOGFILE=string(argv[++i]);
     } 
@@ -132,7 +132,7 @@ void ErrorFinderManager::performConsolidation(int argc,char *argv[])
   }
   if( OPTION.compare( "" ) == 0 )
   {
-    cerr<< " please provide a valid output.type option " <<endl;
+    cerr<< " please provide a valid output-type option " <<endl;
     exit( -1 );
   }
   if( LOGFILE.compare( "" ) == 0 )
@@ -215,11 +215,11 @@ cerr << "Usage: " << argv << " -bmatch [BMATCH FILE]  -bsid [BSID FILE] -bmid [B
 cerr << "Usage: " << argv << " -bmatch [BMATCH FILE]  -bsid [BSID FILE] -bmid [BMID FILE] -reduced [min_snp] [min_cm] "
 <<" -ped-file [ped file] -window [window width to calculate moving averages] "
 <<" -cut-value [value]"
-<<" -output.type [ must provide any of these. it can be "
+<<" -output-type [ must provide any of these. it can be "
 <<" MovingAverages  or Error1 or Error2 or Error3 or ErrorRandom1 " 
 <<" or ErrorRandom2 or Error3 or ErrorRandom3 or Full "
 <<" look at the description about how these works in wiki ]"
-<<" -log.file [log file name]"
+<<" -log-file [log file name]"
 <<endl;
 }
 
